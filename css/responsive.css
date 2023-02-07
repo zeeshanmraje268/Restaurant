@@ -1,0 +1,43 @@
+@media(max-width:991px){
+.text-content{
+    width: 100%;
+}
+
+/* Navbar Design */
+.navigation-wrap .navbar-brand{
+    height: 3.8rem;
+}
+
+.navigation-wrap{
+    text-align: center;
+    background-color: var(--white-color);
+}
+
+.navigation-wrap .nav-link{
+    color: var(--blacl-color);
+    line-height: 1.8rem;
+}
+
+/* End of Navbar Design */
+
+
+
+/* Banner Design */
+
+.top-banner{
+    padding: 9rem 0;
+}
+
+
+/* End of Banner Design */
+
+}
+
+
+
+@media(max-width:767px){
+    .top-banner{
+        padding: 10rem 0;
+    }
+
+}

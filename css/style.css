@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+:focus,
+:hover,
+:active{
+    outline: none;
+    outline-offset: unset;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--primary-color) !important;
+}
+
+ul,
+li{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 100%;
+    font-weight: 400;
+    font-family: var(--primary-font);
+}
+
+:root{
+    --primary-color:#FFC222;
+    --secondary-color:#00a149;
+    --white-color:#fff;
+    --text-color:#b0b0b0;
+    --black-color:#1E1D23;
+    --primary-font:'Roboto', sans-serif;
+    --secondary-font:'Quicksand', sans-serif;
+    --transparent:transparent;
+}
+
+
+/* Custom Scroll Bar */
+
+::-webkit-scrollbar{
+    width: 0.7rem;
+    transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(60, 59, 59);
+}
+
+
+/* End of Custom Scroll Bar */
+
+
+/* Reusable Code */
+
+h1{
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--white-color);
+    text-shadow: 1px 0 6px #000;
+    text-transform: uppercase;
+}
+
+h1 span{
+    color: var(--primary-color);
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+h4{
+    font-size: 1.125rem;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-family: var(--secondary-font);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 1rem;
+    color: var(--black-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-family: var(--secondary-font);
+}
+
+p{
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.main-btn{
+    display: inline-block;
+    line-height: 1.5rem;
+    background: var(--primary-color);
+    border: 3.725px var(--primary-color) solid;
+    padding: 0.5rem 1rem;
+    color: var(--black-color);
+    font-weight: 900;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0px 2px 6px -1px #000;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out ;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+}
+
+.main-btn:hover{
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.wrapper{
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+}
+
+.text-content{
+    width: 70%;
+    margin:auto;
+}
+
+
+/* End of Reusable Code */
+
+
+
+/*  Header Section */
+
+.navigation-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+
+.navigation-wrap .nav-item{
+    padding: 0 1rem;
+}
+
+
+.navbar-toggler:focus{
+    outline: unset;
+    border: none;
+    box-shadow: none;
+}
+
+.nav-link{
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--white-color);
+    letter-spacing: 1px;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color: var(--primary-color) !important;
+}
+
+.navigation-wrap{
+    padding: 0.3rem 1.5rem;
+    box-shadow: none;
+}
+
+/* End of Header Section */
+
+
+/* Navbar after scroll */
+.navigation-wrap.scroll-on{
+    position: fixed;
+    background: var(--white-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.1rem 1.7rem rgba(0, 0,0,0.90 );
+}
+
+.navigation-wrap.scroll-on .nav-link{
+    color: var(--black-color);
+}
+
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link:active{
+    color: var(--primary-color) !important;
+}
+
+/* End of Navbar after scroll */
+
+
+/* Top-Banner Section */
+.top-banner{
+    background: url('../images/bg/bg-1.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    padding: 16rem 0;
+}
+
+
+/* End of Top-Banner Section */
+
+
+/* Our-menu Design */
+
+.our-menu .card{
+    border: none;
+}
+
+.our-menu .link_category_product{
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+
+.our-menu .card .link_category_product::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 97%;
+    border-radius: 50%;
+    background: var(--primary-color);
+    left: -2px;
+    top: 1px;
+    transform: scale(0);
+    z-index: -1;
+    border: 2px dotted var(--secondary-color);
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+.card:hover .link_category_product::before{
+    transform: scale(1);
+}
+
+.our-menu .cat-title a{
+    text-align: center;
+    font-size: 0.8rem;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--black-color);
+}
+
+.card:hover .cat-title a{
+    color: var(--primary-color);
+}
+
+/* End of Our-menu Design */
+
+
+/* About Section */
+
+.about-section{
+    background: var(--black-color);
+}
+
+.about-section li{
+    color: var(--text-color);
+}
+
+.about-section li i{
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.about-section .card,
+.about-section .card img{
+    border-radius: 0.6rem;
+}
+
+.food-type{
+    padding-top: 3rem;
+}
+
+/* End of About Section */
+
+/* Explore Food Section */
+
+.explore-food .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 0.9rem;
+}
+
+.explore-food img{
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.explore-food .card h5{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* End of Explore Food Section */
+
+
+/* Testimonial Section */
+
+.testimonial-section{
+    background: var(--secondary-color);
+}
+.testimonial-section h2{
+    color: var(--white-color);
+}
+
+.testimonial-section .carousel-item{
+    margin-top: 3rem;
+    padding: 10rem 3.125rem;
+    background: var(--black-color);
+    border-radius: 0.9rem;
+    text-align: center;
+}
+
+.testimonial-section .carousel-caption img{
+    max-width: 10rem;
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+
+.testimonial-section .carousel-caption p{
+    font-size: 1rem; 
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.testimonial-section .carousel-caption h5{
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+
+/* end of Testimonial Section */
+
+
+
+.footer{
+  background: var(--black-color);
+} 
+.footer .footer-social a i{
+  font-size: 1.5rem;
+  color:var(--white-color);
+  padding:0 1rem;
+}
+.footer .footer-social a:hover i{
+  color:var(--primary-color);
+}
+ 
+
+/* Form Control */
+.newsletter .form-control{
+  height:3.225rem;
+  padding:0 1.25rem;
+  font-size: 0.875rem;
+  width:100%;
+  border-radius: 0;
+  background:transparent;
+  border:0.1875rem solid var(--white-color);
+  font-weight: 700;
+}
+
+.newsletter input{
+    color: var(--white-color);
+}
+
+
+.newsletter .main-btn{
+  height:3.225rem;
+  padding:0 1.25rem;
+  font-size: 0.875rem;
+  border-radius: 0;
+  background-color: var(--white-color);
+  border:0.1875rem solid var(--white-color);
+  color:var(--black-color);
+  font-weight: 700;
+}
+.newsletter:hover .form-control{
+  border:0.1875rem solid var(--primary-color);
+  
+}
+.newsletter:hover .main-btn{
+ background:var(--primary-color); 
+ border:0.1875rem solid var(--primary-color);
+}
+.newsletter .form-control:hover,
+.newsletter .form-control:focus{
+  outline:none;
+  box-shadow: none;
+  border-color:var(--primary-color);
+  color: var(--white-color);
+}
